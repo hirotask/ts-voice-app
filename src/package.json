@@ -7,7 +7,8 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "clean": "rimraf html/js/dist",
         "tsc": "tsc",
-        "build": "npm-run-all clean tsc"
+        "webpack": "webpack",
+        "build": "npm-run-all clean tsc webpack"
     },
     "author": "hirotask",
     "license": "ISC",
@@ -15,8 +16,11 @@
         "@types/node": "^17.0.23",
         "npm-run-all": "^4.1.5",
         "rimraf": "^3.0.2",
+        "ts-loader": "^9.2.8",
         "ts-node": "^10.7.0",
         "ts-node-dev": "^1.1.8",
-        "typescript": "^4.6.3"
+        "typescript": "^4.6.3",
+        "webpack": "^5.72.0",
+        "webpack-cli": "^4.9.2"
     }
 }
