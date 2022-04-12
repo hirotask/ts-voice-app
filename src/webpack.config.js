@@ -6,7 +6,7 @@ module.exports = {
     mode: 'development', // "production" | "development" | "none"
 
     // メインとなるJavaScriptファイル（エントリーポイント）
-    entry: './html/js/ts/index.ts',
+    entry: './html/js/ts/index.tsx',
 
     output: {
         path: path.join(__dirname, "/html/dist"),
@@ -15,8 +15,7 @@ module.exports = {
 
     module: {
         rules: [{
-            // 拡張子 .ts の場合
-            test: /\.ts$/,
+            test: /\.tsx?$/,
             // TypeScript をコンパイルする
             use: 'ts-loader'
         }]
@@ -28,7 +27,9 @@ module.exports = {
         ],
         extensions: [
             '.ts',
-            '.js' // node_modulesのライブラリ読み込みに必要
+            '.tsx',
+            '.js',
+            '.json'
         ]
     }
 };
